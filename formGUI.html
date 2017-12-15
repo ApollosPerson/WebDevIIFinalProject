@@ -1,0 +1,43 @@
+<html>  
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description" content="unicornFartsAndKittenDrool">
+        <meta name="author" content="Sam Morrison">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Spectral+SC" rel="stylesheet">
+        <title>Add Stuff</title>       
+    </head>
+    <body>
+        <form>
+            <div>
+                <label>Enter Item:</label>
+                <input type="text" id="item" autofocus>
+            </div>
+            <div id="addButton">
+                <button id="submitButton">Add Item</button>
+            </div>
+        </form>
+    </body>
+    <script>
+        // For capturing info from mini window
+        const electron = require('electron');
+        const {ipcRenderer} = electron;
+        
+
+        const form = document.querySelector('form');
+        form.addEventListener('submit', submitForm);
+        form.getElementById('item').innerHTML = '';
+
+        function submitForm(e){
+            e.preventDefault();
+            const item = document.getElementById('item').value;
+            ipcRenderer.send('item:add', item);
+            document.getElementById('item').value = null;
+        }
+        
+    </script>
+</html>

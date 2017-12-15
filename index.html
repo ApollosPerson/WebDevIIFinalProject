@@ -1,0 +1,30 @@
+<html lang="en">
+    <head>
+            <meta name="description" content="unicornFartsAndKittenDrool">
+            <meta name="author" content="Sam Morrison">
+
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+            <link rel="stylesheet" href="styles.css">
+            <link href="https://fonts.googleapis.com/css?family=Spectral+SC" rel="stylesheet">
+            
+            <title>TaskList</title>       
+    </head>
+    <body>
+        <header>
+            <h1>To Do list</h1>
+        </header>
+
+        <ul id="toDo"></ul>
+
+        <div id="fileGroup">
+            <button id="save">Save stuff</button>
+            <button id="open">Open stuff</button>
+            <button id="newItem">Add Stuff</button>
+        </div>
+
+        <script> 
+            require('./renderer.js');    
+        </script>
+    </body>
+    
+</html>

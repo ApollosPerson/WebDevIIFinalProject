@@ -1,0 +1,19 @@
+{
+  "name": "finalProj",
+  "productName" : "My final project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "node.js": "^0.0.0"
+  },
+  "devDependencies": {
+    "electron": "^1.7.9"
+  },
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
